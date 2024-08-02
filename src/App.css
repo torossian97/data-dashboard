@@ -1,0 +1,41 @@
+:root {
+  --sidebar-width: 200px;
+  --sidebar-collapsed-width: 56px;
+  --padding-standard: 1rem;
+  /* colors */
+  --page-color: #303030;
+  --sidebar-color: #262626;
+  --sidebar-item-hover-color: #515151;
+  --sidebar-item-selected-color: #363636;
+  --sidebar-text-color: rgb(205, 205, 205);
+  --sidebar-text-selected-color: #b45bfe;
+}
+
+.App {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  background-color: #303030; /* Example background color */
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Sidebar {
+  width: var(--sidebar-width);
+  flex-shrink: 0; /* Prevents the sidebar from shrinking */
+}
+
+.PageContent {
+  flex-grow: 1;
+  transition: margin-left 0.3s ease-out;
+  margin-left: var(--sidebar-width);
+  overflow-y: auto; /* Add scroll to content if needed */
+}

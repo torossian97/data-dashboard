@@ -1,0 +1,9 @@
+/* FavouritesPage.css */
+.commonPage {
+    background-color: var(--page-color); /* Slightly darker than the sidebar for contrast */
+    color: white; /* Example text color for visibility */
+    padding: 20px; /* Appropriate padding */
+    min-height: 100vh; /* Adjust based on header or other elements if present */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+  }
+  

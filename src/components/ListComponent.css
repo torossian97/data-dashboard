@@ -1,0 +1,60 @@
+.list-container {
+    width: 100%;
+  }
+  
+  .list-header, .list-item {
+    display: flex;
+    padding: 10px;
+    color: #FFF;
+    background-color: #262626;
+  }
+  
+  .list-item {
+    margin-bottom: 2px;
+    border-radius: 8px;
+    cursor: pointer; 
+  }
+
+  .list-item:hover {
+    background-color: #26262644; /* Light grey background on hover */
+    transform: translateY(-2px); /* Slightly lift the row on hover */
+  }
+  
+  .header-company-name, .item-company-name {
+    font-weight: bold;
+    flex: 4;
+    text-align: left; /* Align company name to the left */
+  }
+  
+  .header-data, .item-data {
+    display: flex;
+    flex-grow: 8;
+  }
+  
+  .header-data span, .item-data span {
+    flex: 1;
+    width: 30px;
+    text-align: center; /* Center align the data */
+    position: relative; /* Needed for the positioning of the pseudo-element */
+  }
+  
+  /* Adjusting the divider */
+  .item-data span:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0; /* Align the divider to the right edge of the span */
+    top: 0;
+    bottom: 0;
+    border-right: 1px solid #3a3a3a; /* Dark grey divider, acting as a right border */
+    width: 1px; /* The width of the border */
+  }
+  
+  .list-header {
+    background-color: #333;
+    font-weight: bold;
+  }
+  
+  .list-header span {
+    color: #EEE;
+  }
+  
