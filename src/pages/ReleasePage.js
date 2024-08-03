@@ -435,7 +435,8 @@ function ReleasePage() {
 
   return (
     <div className="commonPage">
-      <h2>Customer Cohorts</h2>
+      <h2>Release Cohorts</h2>
+      <Typography>The following cohorts are comprised of customers that are fully unblocked by each planned release. The "nice-to-have" toggle either includes non-critical features in this calculation, or omits them.</Typography>
       <FormGroup>
         <FormControlLabel
           control={

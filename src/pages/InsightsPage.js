@@ -9,6 +9,7 @@ import ListSubheader from "@mui/material/ListSubheader";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import Chip from "@mui/joy/Chip";
+import { Alert, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import completedV3Config from "../data/completedV3.json"; // Make sure this path is correct
 
@@ -223,7 +224,9 @@ function InsightsPage() {
 
   return (
     <div className="commonPage">
+      <Alert severity="info" sx={{paddingY: "0px"}}>This is MOCK data; no real or sensitive data is present in this demo.</Alert>
       <h2>Scheduler Customers</h2>
+      <Typography>Click on a customer to see used and missing features, as well as usage rate. Order all customers by ARR, page volume, or priority with the buttons below.</Typography>
       <ListComponent
         data={CustomerData}
         onItemClick={(details, name) => toggleDrawer(true, details, name)()}

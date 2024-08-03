@@ -7,7 +7,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import ListSubheader from "@mui/material/ListSubheader";
-import Chip from "@mui/joy/Chip";
+import { Typography } from "@mui/material";
 
 const CohortsList = lazy(() => import("../components/CohortsList"));
 
@@ -127,6 +127,7 @@ function MigrationPage() {
   return (
     <div className="commonPage">
       <h2>Migration Cohorts</h2>
+      <Typography>The following cohorts consist of customers who share 100% of the same features, with cohorts in ascending order of # of features left to unblock before migration is possible. Click a cohort for a list of those features.</Typography>
       {customerData ? (
         <Suspense fallback={<div>Loading CohortsList...</div>}>
           <CohortsList
